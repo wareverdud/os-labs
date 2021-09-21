@@ -11,8 +11,7 @@ int buffer = 0;
 void* produce(void* args) {
     while (TRUE) {
         buffer += 1;
- 	usleep(100000);
- 	//sleep(0.1);
+        usleep(100000);
     }
 }
 
@@ -27,6 +26,6 @@ int main() {
     pthread_t consume_thread, produce_thread;
     pthread_create(&produce_thread, NULL, &produce, NULL);
     pthread_create(&consume_thread, NULL, &consume, NULL);
-    sleep(120);
+    sleep(61);
     exit(EXIT_SUCCESS);
 }
