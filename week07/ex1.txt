@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   2075	    624	      8	   2707	    a93	a.out
