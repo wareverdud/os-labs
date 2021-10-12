@@ -1,0 +1,3 @@
+For seeing more explicitly how my process occupies memory I started allocating 1GB.
+Thus my process quickly comes up in the top panel.
+As the time goes my process increases the amount of virtual memory and resources used.

@@ -1,0 +1,3 @@
+When the process has started the amount of free memory started decreasing by 10MB.
+However si and so fields do not change because there is enough free memory for completing the process without swapping.
+After the process has ended the memory was given back.

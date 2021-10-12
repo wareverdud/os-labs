@@ -1,0 +1,3 @@
+From given 16 bits 13 of them will be used for page offset because 2^13 is 8192 bytes of 8KB.
+3 bits which are left will be used for pointing to page number.
+Thus we will have 2^3=8 pages.
