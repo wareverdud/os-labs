@@ -1,0 +1,45 @@
+Firstly I changed the input:
+2 4
+1 1
+1 2
+2 3
+2 2
+To the input:
+2 4
+1 2
+1 1
+2 3
+2 2
+And that change decreased hit/miss ratio because the delay between requesting page number 2 increased. 
+
+Secondly I changed the input:
+2 5
+1 1
+1 2
+2 3
+3 4
+4 2
+To the input:
+2 5
+1 1
+1 2
+2 2
+3 4
+4 3
+In the second example I moved second request of page 2 closer to the first request. So that page 2 was already in the physical memory.
+
+Thirdly I changed the input:
+2 5
+1 1
+1 2
+2 2
+3 4
+4 3
+To the input:
+2 5
+1 1
+1 2
+2 3
+2 4
+3 2
+That way no change in the ratio happened. That is because even though I moved second request of page 2 as far as possible I changed the time of request to keep the same ratio.
