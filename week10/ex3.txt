@@ -1,0 +1,6 @@
+-rw-rw-rw- 1 ubunta ubunta 11 окт 24 20:32 _ex3.txt
+-rwxrw-rwx 1 ubunta ubunta 11 окт 24 20:32 _ex3.txt
+-rwxrwxrwx 1 ubunta ubunta 11 окт 24 20:32 _ex3.txt
+chmod 660 means rw- for user, rw- for group and --- for others
+chmod 775 means rwx for user, rwx for group and r-x for others
+chmod 777 means rwx for user, rwx for group and rwx for others

@@ -1,0 +1,2 @@
+/home/ubunta/os-labs/week01/file.txt
+/home/ubunta/os-labs/week10/_ex2.txt
