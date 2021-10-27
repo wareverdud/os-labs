@@ -1,0 +1,16 @@
+fallocate -l 50M test.txt // created file with size 50mb
+
+losetup -a
+ls /dev/loop*
+
+losetup -f lofs.img // setted loopback device on the free place
+
+sudo mkfs.ext4 /dev/loop5 // because /dev/loop5 is where file system was created
+
+// created folder lofsdisk in home
+sudo mount /dev/loop5 ~/lofsdisk // mount to the folder lofsdisk
+sudo mount lofs.img ./lofsdisk
+
+
+// /dev/loop to which lofs.img was mounted can be determined by grep
+losetup -a | grep /week11/lofs.img | awk

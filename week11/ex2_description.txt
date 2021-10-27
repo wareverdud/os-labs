@@ -1,0 +1,20 @@
+Created 2 files in week11 and them copy them to ~/lofsdisk
+Create ex2.c in week11 and copy to ~/lofsdisk
+ex2.c should list every file in root
+in bash we need to change the root using chroot to /lofsdisk
+and then run ex2.c
+
+
+
+Need to copy commands from /bin/bash or /bin/ls (e.g.) to be able to execute them from /lofsdisk (Create folder /lofsdisk/bin and then copy to it bash and ls)
+
+Need to copy shared libraries to /lofsdisk to be able to chroot 
+ldd /bin/ls
+create folders for each shared library to /lofsdisk
+then sudo cp files to /lofsdisk
+
+
+Copy shared libraries of /bin/bash  and of /bin/ls
+
+
+sudo chroot ~/lofsdisk ex2
