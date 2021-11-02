@@ -3,7 +3,7 @@
 #include <dirent.h>
 
 int main() {
-	DIR *dir = opendir(".");
+	DIR *dir = opendir("/");
 	if (dir == NULL) return 0;
 	
 	struct dirent *file = readdir(dir);
