@@ -1,12 +1,12 @@
-.
-lib
-ex2.out
-file1.txt
+..
+bin
 lost+found
 file2.txt
-bin
+file1.txt
+.
+ex2.out
+lib
 lib64
-..
 Without changing root
 lost+found
 libx32

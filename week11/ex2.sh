@@ -22,9 +22,11 @@ sudo cp /lib64/ld-linux-x86-64.so.2 ./lib64
 # Libraries for ls
 sudo cp /lib/x86_64-linux-gnu/libselinux.so.1 ./lib/x86_64-linux-gnu
 sudo cp /lib/x86_64-linux-gnu/libpcre2-8.so.0 ./lib/x86_64-linux-gnu
-sudo cp /lib/x86_64-linux-gnu/libdl.so.2 ./lib/x86_64-linux-gnu
+#sudo cp /lib/x86_64-linux-gnu/libdl.so.2 ./lib/x86_64-linux-gnu
 sudo cp /lib/x86_64-linux-gnu/libpthread.so.0 ./lib/x86_64-linux-gnu
 # Libraries for cat and echo have already been copied
+cd ..
+
 sudo chroot ./lofsdisk ./ex2.out > ex2.txt
 echo "Without changing root" >> ex2.txt
 ./ex2.out >> ex2.txt
