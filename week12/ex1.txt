@@ -50,3 +50,5 @@
     d258-d25b : ahci
   d260-d26f : 0000:00:0d.0
     d260-d26f : ahci
+    
+Here dma1, pic1 and timer1 represent different controllers which are mapped to i/o ports from 0000 to 001f, form 0020 to 0021, from 0050 to 0053 respectively.
