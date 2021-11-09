@@ -9,6 +9,7 @@
 int main() {
     int fd = open("/dev/input/by-path/platform-i8042-serio-0-event-kbd", O_RDONLY);
     if (fd == -1) return 0;
+    FILE* out = fopen("./ex3.txt", "w");
     struct input_event evt;
     char* t[] = {"RELEASED", "PRESSED"};
 
@@ -35,10 +36,14 @@ int main() {
                 cap[0] = 1;
             if (evt.value == 0 && evt.code == 46)
                 cap[0] = 0;
-            if (pe[0] == 1 && cap[0] == 1 && cap[1] == 1)
+            if (pe[0] == 1 && cap[0] == 1 && cap[1] == 1) {
                 printf("Get some capuccino!\n");
-            if (pe[0] == 1 && pe[1] == 1)
+                fprintf(out, "Get some capuccino!\n");
+            }
+            if (pe[0] == 1 && pe[1] == 1) {
                 printf("I passed the Exam!\n");
+                fprintf(out, "I passed the Exam!\n");
+            }
             if (evt.value == 0 && evt.code == 24)
                 os[0] = 0;
             if (evt.value == 1 && evt.code == 24)
@@ -47,9 +52,13 @@ int main() {
                 os[1] = 0;
             if (evt.value == 1 && evt.code == 31)
                 os[1] = 1;
-            if (os[0] == 1 && os[1] == 1)
+            if (os[0] == 1 && os[1] == 1) {
                 printf("Operating Systems\n");
+                fprintf(out, "Operating Systems\n");
+            }
+            fflush(out);
         }
     }
+    fclose(out);
     return 0;
 }
